@@ -1,93 +1,381 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Ezra's Portfolio</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/fonts.css">
-    </head>
-    <body>
-        <div class="nav">
-            <div class="contactMe">
-                <a href="https://www.linkedin.com/in/ezra-yeoshua/">
-                    <img src="images/Chat_Pink.png" alt="chat logo"  width="30px">
-                    Contact Me
-                </a>
-            </div>
-            <div class="navIcons">
-                <a href="https://www.linkedin.com/in/ezra-yeoshua/">
-                    <img src="images/LinkedIn_Gray.png" alt="linkedin logo"  width="18px">
-                </a>
-            </div>
-        </div>
-        <div class="landing">
-            <div class="landingWrapper">
-                <div class="landingL">
-                    <h1>Ezra Yeoshua.</h1>
-                    <p>Helloooo, my name is Ezra and I’m a polytechnic<br> fresh graduate aspiring to become a<br>
-                        <span class="pink">Software Developer.</span>
-                    </p>
-                    <ul>
-                        <li><p>UI/UX</p></li>
-                        <li><p>Web Design</p></li>
-                        <li><p>Front-end</p></li>
-                    </ul>
-                </div>
-                <div class="landingR">
-                    <img src="images/Face_image.png" alt="ezra pic" width="250px">
-                </div>
-            </div>
-            <img src="images/Scroll.png" alt="scroll down" class="scroll">
-        </div>
-        <div class="skills">
-            <h2>Skills</h2>
-            <p>Mostly acquired from 3 years at <span class="pink">Singapore Polytechnic</span> and from my<br> 
-                <span class="pink">Internship at Skyfy Technologies Pte Ltd.</span></p>
-            <div class="programs">
-                <img src="images/Adobe.png" alt="adobe programs" width="80px">
-                <img src="images/RnAs.png" alt="mobile dev" width="200px">
-                <img src="images/HtmlCssJs.png" alt="web design" width="70px">
-            </div>
-            <p class="added">+ Firebase, MongoDb, ASP.net, C#, SQL Server, Github & Git, Azure DevOps,<br>
-                Wire-framing/Prototyping Tools (Sketchapp, Marvelapps, Proto.io)</p>
-        </div>
-        <div class="work2 clearfix">
-            <div class="workText">
-                <h1>Skyfy VTS App</h1>
-                <a href="#"><h5>View Project</h5></a>
-                <div class="underline"></div>
-            </div>
-            <ul>
-                <li>
-                    <a href="https://itunes.apple.com/us/app/skyfy-vts-2-0/id1449590451?mt=8">
-                        <img src="images/App_store.png" alt="app store logo"  width="25px">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://play.google.com/store/apps/details?id=com.vts2&hl=en">
-                        <img src="images/Play_store.png" alt="play store logo" width="25px">
-                    </a>
-                </li>
-            </ul>
-            <img src="images/Project_01.png" alt="skyfy project" class="workImg" width="3000px">
-        </div>
-        <div class="work clearfix">
-            <div class="workText">
-                <h1>SGH Antimicrobial Guidelines</h1>
-                <a href="#"><h5>View Project</h5></a>
-                <div class="underline"></div>
-            </div>
-            <ul>
-                <li><a href="#"><img src="images/App_store.png" alt="app store logo"  width="25px"></a></li>
-                <li><a href="#"><img src="images/Play_store.png" alt="play store logo"  width="25px"></a></li>
-            </ul>
-            <img src="images/Project_02.png" alt="sgh project" class="workImg" width="3000px">
-        </div>
-        <div class="footer">
-            <h3 class="pink">Ask me: ezrayeoshua123@gmail.com</h3>
-            <div class="underlineSmall"></div>
-        </div>
-    </body>
-</html>
+<html lang="en">
 
+<head>
+  <title>Bootstrap Tutorial Sample Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/fixed.css">
+</head>
+
+<body data-spy="scroll" data-target="navbarResponsive">
+  <!--Start Home section-->
+  <div id="home">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <!-- <a class="navbar-brand" href="#"><img src="img/crown.jpg"></a> -->
+      <h3 class="logotext">ezra</h3>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- End Navigation -->
+
+    <!-- Start Landing page section-->
+    <div class="landing">
+      <div class="home-wrap">
+        <div class="home-inner">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="caption text-center">
+      <h1>ezra yeoshua</h1>
+      <h3>App Developer | ui/ux designer</h3>
+      <a class="btn btn-outline-light btn-lg" href="#skills">SEE MORE</a>
+    </div>
+    <!-- End Landing page section-->
+
+
+  </div>
+  <!---End Home section--->
+
+  <!--Start Skills section-->
+  <div id="skills" class="offset">
+    <div class="col-12 narrow text-center">
+      <h1>Skills</h1>
+    </div>
+
+    <div class="col-8 narrow">
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%">90%
+        </div>
+      </div>
+      <p>React Native (Javascript)</p>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%">75%
+        </div>
+      </div>
+      <p>Java for Android</p>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%">80%
+        </div>
+      </div>
+      <p>Figma</p>
+    </div>
+
+    <div class="narrow text-center">
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="feature">
+            <i class="fas fa-code fa-4x" data-fa-transform="shrink-3 up-5"></i>
+            <h3>Programming Languages <br> & Frameworks</h3>
+            <ul class="text-left">
+              <li>Javascript, Java, HTML5, CSS3</li>
+              <li>React Native + Redux, VueJS, Bootstrap</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature">
+            <i class="fas fa-pencil-ruler fa-4x" data-fa-transform="shrink-3 up-5"></i>
+            <h3>Design & IDE Tools</h3>
+            <ul class="text-left">
+              <li>Visual Studio Code, Android Studio, Xcode, iTerm2</li>
+              <li>Figma, Adobe XD, Sketchapp, Photoshop, Illustrator, Marvelapp, Proto.io, Mockingbot</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature">
+            <i class="fas fa-code-branch fa-4x" data-fa-transform="shrink-3 up-5"></i>
+            <i class="fas fa-database fa-4x" data-fa-transform="shrink-3 up-5"></i>
+            <h3>Version Control & <br> DB Management</h3>
+            <ul class="text-left">
+              <li>Azure DevOps, Github, Bitbucket</li>
+              <li>Firebase Database, MongoDb, SQL Server</li>
+            </ul>
+          </div>
+        </div>
+      </div> <!-- End Row -->
+    </div>
+  </div>
+  <!---End Skills section--->
+
+  <!--Start Experience section-->
+  <div id="experience" class="offset">
+
+    <div class="jumbotron">
+      <div class="narrow text-center">
+        <div class="col-12">
+          <h3 class="heading">EXPERIENCE</h3>
+          <div class="heading-underline"></div>
+        </div>
+
+        <!-- Start Timeline -->
+        <div class="row">
+          <div class="col-12">
+
+            <ul class="timeline text-dark">
+              <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                <div class="timeline-arrow"></div>
+                <h2 class="h5 mb-0">App Developer, Skyfy Technology</h2>
+                <span class="small text-gray"><i class="fas fa-clock mr-1"></i>May 2019 – Present</span>
+                <ul class="text-left pt-3">
+                  <li>Upgraded and maintained VTS mobile app developed during intern</li>
+                  <li>Developed an android app for iG Logistics that ensures secure and efficient vehicle
+                    stock and locate management using Digital Signatures and NFC capabilities</li>
+                  <li>Developed a workforce tracking and management app using a start and end timing or
+                    log book feature</li>
+                  <li>Maintained other Skyfy apps e.g. ​LM2 - Route planning app by A*Star</li>
+                </ul>
+              </li>
+
+              <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                <div class="timeline-arrow"></div>
+                <h2 class="h5 mb-0">UI/UX Designer, Constant Bearing</h2>
+                <span class="small text-gray"><i class="fas fa-clock mr-1"></i>Apr 2019 – May 2019</span>
+                <ul class="text-left pt-3">
+                  <li>Initialized and designed Constant Bearing’s Port Call Management app to provide a
+                    solution for crew members to plan and execute their port call operations more effectively</li>
+                  <li>Assisted lead developer by developing a few pages for ConsBear web portal MVP (Vue)</li>
+                  <li>Participated in BACECAMP Startup Mentorship Programme with Founder of ConsBear -
+                    observed how early-stage startups are equipped with key insights, best practices and capabilities
+                    to
+                    start and grow</li>
+                </ul>
+              </li>
+
+              <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                <div class="timeline-arrow"></div>
+                <h2 class="h5 mb-0">App Developer Intern, Skyfy Technology</h2>
+                <span class="small text-gray"><i class="fas fa-clock mr-1"></i>Oct 2018 – Feb 2018</span>
+                <ul class="text-left pt-3">
+                  <li>Integrated Skyfy’s Vehicle Tracking System web portal to generate vehicular reports
+                    (e.g. speed, idle timings, live locations, etc.) into a cross-platform mobile app with other
+                    features such as Tracks playback, Intercom Support, Geofence View, etc.</li>
+                </ul>
+              </li>
+
+              <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                <div class="timeline-arrow"></div>
+                <h2 class="h5 mb-0">Final-year Project, Singapore General Hospital</h2>
+                <span class="small text-gray"><i class="fa fa-clock mr-1"></i>Apr 2018 – Oct 2018</span>
+                <ul class="text-left pt-3">
+                  <li>Developed a cross-platform mobile application for SGH pharmacists (in a Team of 5)</li>
+                  <li>Created a solution to provide a web portal where
+                    pharmacists can share common hospital practices and guideline information which can
+                    be accessed using a mobile app with offline support</li>
+                  <li>Maintained until Jan 2019</li>
+                </ul>
+              </li>
+            </ul>
+
+          </div><!-- End Timeline -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!---End Experience section--->
+
+  <!--Start Projects section-->
+  <div id="projects" class="offset">
+
+    <!--Start Jumbotron-->
+    <div class="cardlist">
+      <div class="narrow text-center">
+        <div class="col-12">
+          <h3 class="heading">Projects</h3>
+          <div class="heading-underline"></div>
+        </div>
+
+        <!-- Start Timeline -->
+        <div class="text-center">
+          <div class="row">
+
+            <div class="col-md-4">
+              <div class="card">
+                <img src="img/ats.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Asset Tracking System</h5>
+                  <p class="card-text">Use NFC to locate and identify your vehicles.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Digital Signature</li>
+                  <li class="list-group-item">Location Tracking</li>
+                  <li class="list-group-item">Capture Photos</li>
+                  <li class="list-group-item">NFC</li>
+                </ul>
+                <div class="card-body">
+                  <a class="btn btn-sm" href="#"><i class="fas fa-code fa-2x" data-fa-transform="shrink-3"></i></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card">
+                <img src="https://media.giphy.com/media/VEmgRo5yQoqKvwjeK8/giphy.gif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Vehicle Tracking System</h5>
+                  <p class="card-text">Organizations may now control and keep track of their vehicle assets no matter
+                    where they are.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Generate Vehicle Reports</li>
+                  <li class="list-group-item">Tracks playback</li>
+                  <li class="list-group-item">Intercom Support</li>
+                  <li class="list-group-item">Push Notifications</li>
+                </ul>
+                <div class="card-body">
+                  <a class="btn btn-sm" href="https://play.google.com/store/apps/details?id=com.vts2&hl=en_SG"><i
+                      class="fab fa-google-play fa-2x" data-fa-transform="shrink-3"></i></a>
+                  <a class="btn btn-sm" href="https://apps.apple.com/sg/app/skyfy-vts-2-0/id1449590451"><i
+                      class="fab fa-apple fa-2x ml-3 mr-3" data-fa-transform="shrink-3"></i></i></a>
+                  <a class="btn btn-sm" href="#"><i class="fas fa-code fa-2x" data-fa-transform="shrink-3"></i></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card">
+                <img src="https://media.giphy.com/media/gKOPWkchNJeqE08XvU/giphy.gif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Workforce Tracking System</h5>
+                  <p class="card-text">Stay informed on the whereabouts of your key business assets.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Start/End Shift</li>
+                  <li class="list-group-item">Location Tracking</li>
+                  <li class="list-group-item">Generate Shift Report</li>
+                  <li class="list-group-item">Offline Support</li>
+                </ul>
+                <div class="card-body">
+                  <a class="btn btn-sm" href="https://play.google.com/store/apps/details?id=com.wtsapp&hl=en_SG"><i
+                      class="fab fa-google-play fa-2x" data-fa-transform="shrink-3"></i></a>
+                  <a class="btn btn-sm" href="https://apps.apple.com/sg/app/skyfy-wts/id1477956611"><i
+                      class="fab fa-apple fa-2x ml-3 mr-3" data-fa-transform="shrink-3"></i></i></a>
+                  <a class="btn btn-sm" href="#"><i class="fas fa-code fa-2x" data-fa-transform="shrink-3"></i></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- End Timeline -->
+      </div>
+
+    </div> <!-- End Narrow -->
+  </div><!-- End Jumbotron-->
+  <!---End Projects section--->
+
+  <!--Start Education section-->
+  <div id="education" class="offset">
+
+    <!--Start Jumbotron-->
+    <div class="jumbotron">
+      <div class="narrow text-center">
+        <div class="col-12">
+          <h3 class="heading">Education</h3>
+          <div class="heading-underline"></div>
+        </div>
+
+        <!-- Start Timeline -->
+        <div class="row">
+          <div class="col-12 mx-auto">
+
+            <ul class="timeline text-center">
+              <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                <div class="timeline-arrow"></div>
+                <h2 class="h5 mb-0">Diploma in Information Technology, Singapore Polytechnic</h2>
+                <span class="small text-gray"><i class="fas fa-clock mr-1"></i>2016 – 2019</span>
+                <ul class="text-left pt-3">
+                  <li>Specialization: Solutions Development</li>
+                  <li>Electives: User Interface Design, Business Analytics and Network Security</li>
+                </ul>
+              </li>
+
+              <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                <div class="timeline-arrow"></div>
+                <h2 class="h5 mb-0">GCE ‘O’ Levels, Gan Eng Seng School</h2>
+                <span class="small text-gray"><i class="fas fa-clock mr-1"></i>2012 – 2015</span>
+              </li>
+            </ul>
+
+          </div>
+        </div><!-- End Timeline -->
+      </div>
+
+    </div> <!-- End Narrow -->
+  </div><!-- End Jumbotron-->
+  <!---End Education section--->
+
+  <!--Start Contact section-->
+  <div id="contact" class="offset">
+    <div class="col-12 narrow text-center">
+      <p class="lead">Want to collaborate or talk?</p>
+      <a class="btn btn-secondary btn-md" href="https://wa.me/6582330347" target="_blank">Click
+        here</a>
+    </div>
+
+    <footer>
+      <div class="row justify-content-center">
+        <div class="col-md-5 text-center">
+          <!-- <img src="img/nuno.png"> -->
+          <h3 class="logotext">ezra</h3>
+          <p> </p>
+          <strong>Contact Info</strong>
+          <p>+65 82330347 <br> ezrayeoshua123@gmail.com</p>
+          <a href="https://wa.me/6582330347" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://linked.in/ezra-yeoshua" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://instagram.com/ezrayeoshua" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <hr class="socket">
+        &copy; Created by Ezra
+      </div>
+    </footer>
+
+  </div>
+  <!---End Contact section--->
+
+  <!--Script-->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" data-auto-replace-svg="nest"></script>
+  <!--End Script-->
+</body>
+
+</html>
