@@ -26,6 +26,10 @@
     }
  }
 
+ html {
+    scroll-behavior: smooth;
+ }
+
 body {
     overflow-x: hidden; 
     font-family: 'Lato', sans-serif;
@@ -70,7 +74,8 @@ li {
     text-transform: uppercase;
     font-size: .9rem;
     letter-spacing: .1rem;
-    background: #B3A29B90 !important;
+    background: #B3A29B !important;
+    transition: top 0.3s;
 }
 
 .navbar-brand img {
@@ -367,11 +372,22 @@ h3.heading {
 }
 
 /* projects */
+
+.no-pt {
+    padding-top: 0;
+}
+
 .cardlist {
     margin-bottom: 0;
     padding: 0;
     border-radius: 0;
     background-color: #FFFFFF;
+}
+
+.cardlist a {
+    text-decoration: none;
+    color: #505962;
+    cursor: pointer;
 }
 
 .cardlist h5 {

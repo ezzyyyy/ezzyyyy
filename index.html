@@ -9,6 +9,7 @@
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/fixed.css">
+  <script src="myScript.js"></script>
 </head>
 
 <body data-spy="scroll" data-target="navbarResponsive">
@@ -16,7 +17,7 @@
   <div id="home">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <nav id="navbar" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <h3 class="logotext"><i class="fas fa-cat"></i></h3>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
         <span class="navbar-toggler-icon"></span>
@@ -213,20 +214,20 @@
     <!--Start Jumbotron-->
     <div class="text-center">
       <div class="col-12">
-        <h3 class="heading">Projects</h3>
+        <h3 class="heading">Dev Projects</h3>
         <div class="heading-underline"></div>
       </div>
-      <div class="narrow cardlist">
-
+      <div class="cardlist">
         <!-- Start Timeline -->
-        <div class="text-center">
+        <div class="narrow text-center no-pt">
           <div class="row">
 
             <div class="col-md-4">
-              <div class="card">
+              <a href="https://bitbucket.org/ezzyyyy/vehicle-stock-management-system" target="_blank">
+                <div class="card">
                 <img src="img/ats.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Asset Tracking System</h5>
+                  <h5 class="card-title">Asset Tracking</h5>
                   <p class="card-text">Use NFC to locate and identify your vehicles.</p>
                 </div>
                 <ul class="list-group list-group-flush">
@@ -236,56 +237,111 @@
                   <li class="list-group-item">NFC</li>
                 </ul>
                 <div class="card-body">
-                  <a class="btn btn-sm" href="#"><i class="fas fa-code fa-2x" data-fa-transform="shrink-3"></i></i></a>
+                  <a class="btn btn-sm" href="https://bitbucket.org/ezzyyyy/vehicle-stock-management-system" target="_blank"><i
+                      class="fas fa-code fa-2x" data-fa-transform="shrink-3"></i></i></a>
                 </div>
               </div>
+              </a>
             </div>
 
             <div class="col-md-4">
-              <div class="card">
-                <img src="https://media.giphy.com/media/VEmgRo5yQoqKvwjeK8/giphy.gif" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Vehicle Tracking System</h5>
-                  <p class="card-text">Organizations may now control and keep track of their vehicle assets no matter
-                    where they are.</p>
+              <a href="https://apps.apple.com/sg/app/skyfy-vts-2-0/id1449590451" target="_blank">
+                <div class="card">
+                  <img src="https://media.giphy.com/media/VEmgRo5yQoqKvwjeK8/giphy.gif" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Vehicle Tracking</h5>
+                    <p class="card-text">Organizations may now control and keep track of their vehicle assets no matter
+                      where they are.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Generate Vehicle Reports</li>
+                    <li class="list-group-item">Tracks playback</li>
+                    <li class="list-group-item">Intercom Support</li>
+                    <li class="list-group-item">Push Notifications</li>
+                  </ul>
+                  <div class="card-body">
+                    <a class="btn btn-sm" href="https://play.google.com/store/apps/details?id=com.vts2&hl=en_SG" target="_blank"><i
+                        class="fab fa-google-play fa-2x" data-fa-transform="shrink-3"></i></a>
+                    <a class="btn btn-sm" href="https://apps.apple.com/sg/app/skyfy-vts-2-0/id1449590451" target="_blank"><i
+                        class="fab fa-apple fa-2x ml-3 mr-3" data-fa-transform="shrink-3"></i></i></a>
+                    <a class="btn btn-sm" href="https://bitbucket.org/ezzyyyy/tracking-system" target="_blank"><i
+                        class="fas fa-code fa-2x" data-fa-transform="shrink-3"></i></i></a>
+                  </div>
                 </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Generate Vehicle Reports</li>
-                  <li class="list-group-item">Tracks playback</li>
-                  <li class="list-group-item">Intercom Support</li>
-                  <li class="list-group-item">Push Notifications</li>
-                </ul>
-                <div class="card-body">
-                  <a class="btn btn-sm" href="https://play.google.com/store/apps/details?id=com.vts2&hl=en_SG"><i
-                      class="fab fa-google-play fa-2x" data-fa-transform="shrink-3"></i></a>
-                  <a class="btn btn-sm" href="https://apps.apple.com/sg/app/skyfy-vts-2-0/id1449590451"><i
-                      class="fab fa-apple fa-2x ml-3 mr-3" data-fa-transform="shrink-3"></i></i></a>
-                  <a class="btn btn-sm" href="#"><i class="fas fa-code fa-2x" data-fa-transform="shrink-3"></i></i></a>
-                </div>
-              </div>
+              </a>
             </div>
 
             <div class="col-md-4">
-              <div class="card">
-                <img src="https://media.giphy.com/media/gKOPWkchNJeqE08XvU/giphy.gif" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Workforce Tracking System</h5>
-                  <p class="card-text">Stay informed on the whereabouts of your key business assets.</p>
+              <a href="https://apps.apple.com/sg/app/skyfy-wts/id1477956611" target="_blank">
+                <div class="card">
+                  <img src="https://media.giphy.com/media/gKOPWkchNJeqE08XvU/giphy.gif" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Workforce Tracking</h5>
+                    <p class="card-text">Stay informed on the whereabouts of your key business assets.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Start/End Shift</li>
+                    <li class="list-group-item">Location Tracking</li>
+                    <li class="list-group-item">Generate Shift Report</li>
+                    <li class="list-group-item">Offline Support</li>
+                  </ul>
+                  <div class="card-body">
+                    <a class="btn btn-sm" href="https://play.google.com/store/apps/details?id=com.wtsapp&hl=en_SG" target="_blank"><i
+                        class="fab fa-google-play fa-2x" data-fa-transform="shrink-3"></i></a>
+                    <a class="btn btn-sm" href="https://apps.apple.com/sg/app/skyfy-wts/id1477956611" target="_blank"><i
+                        class="fab fa-apple fa-2x ml-3 mr-3" data-fa-transform="shrink-3"></i></i></a>
+                    <a class="btn btn-sm" href="https://bitbucket.org/ezzyyyy/workforce-management-system" target="_blank"><i
+                        class="fas fa-code fa-2x" data-fa-transform="shrink-3"></i></i></a>
+                  </div>
                 </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Start/End Shift</li>
-                  <li class="list-group-item">Location Tracking</li>
-                  <li class="list-group-item">Generate Shift Report</li>
-                  <li class="list-group-item">Offline Support</li>
-                </ul>
-                <div class="card-body">
-                  <a class="btn btn-sm" href="https://play.google.com/store/apps/details?id=com.wtsapp&hl=en_SG"><i
-                      class="fab fa-google-play fa-2x" data-fa-transform="shrink-3"></i></a>
-                  <a class="btn btn-sm" href="https://apps.apple.com/sg/app/skyfy-wts/id1477956611"><i
-                      class="fab fa-apple fa-2x ml-3 mr-3" data-fa-transform="shrink-3"></i></i></a>
-                  <a class="btn btn-sm" href="#"><i class="fas fa-code fa-2x" data-fa-transform="shrink-3"></i></i></a>
+              </a>
+            </div>
+          </div>
+        </div><!-- End Timeline -->
+      </div>
+      <div class="col-12">
+        <h3 class="heading">UI/UX Projects</h3>
+        <div class="heading-underline"></div>
+      </div>
+      <div class="cardlist">
+        <!-- Start Timeline -->
+        <div class="narrow text-center no-pt">
+          <div class="row">
+
+            <div class="col-md-4">
+              <a href="https://www.figma.com/file/qHjxve07p8Cd8mmQC4PFg5/payboy?node-id=0%3A1" target="_blank">
+                <div class="card">
+                  <img src="https://media2.giphy.com/media/UVlCyvZWAk43nr4AkH/giphy.gif" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Payboy Revamp</h5>
+                    <p class="card-text">Re-imagine Payboy's new dashboard page.</p>
+                  </div>
                 </div>
-              </div>
+              </a>
+            </div>
+
+            <div class="col-md-4">
+              <a href="https://www.figma.com/file/klo6GAjpcLuY8TA8ufEW5r/Food-Waste-App-Ideas?node-id=25%3A1" target="_blank">
+                <div class="card">
+                  <img src="https://media0.giphy.com/media/VIhKEEoOsy3gB7dwH3/giphy.gif" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Surplus Food Sharing</h5>
+                    <p class="card-text">Find surplus delicacies at a cheaper price near you.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4">
+              <a href="https://www.figma.com/file/C9tIzJaDkONikQ60uqgwaI/Group-C-App?node-id=1%3A4" target="_blank">
+                <div class="card">
+                  <img src="https://media2.giphy.com/media/Ihy6CX475A8fzyIrgS/giphy.gif" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Auto-donation</h5>
+                    <p class="card-text">Donate to your chosen campaigns or charities anytime, anywhere.</p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div><!-- End Timeline -->
