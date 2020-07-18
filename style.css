@@ -1,10 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Beth+Ellen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap');
-
-@media (max-width: 575.98px) { 
+ 
+@media (max-width: 576px) { 
     .narrow {
-        width: 80% !important;
+        width: 100% !important;
+    }
+    .caption h1 {
+        font-size: 2.3rem !important;
+    }
+    .caption h4 {
+        font-size: 1.2rem !important;
+    }
+ }
+
+@media (max-width: 768px) { 
+    .narrow {
+        width: 90% !important;
     }
     .caption h1 {
         font-size: 2.3rem !important;
