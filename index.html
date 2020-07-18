@@ -20,7 +20,7 @@
   </script>
 </head>
 
-<body data-spy="scroll" data-target="navbarResponsive">
+<body class="smooth-scroll" data-spy="scroll" data-target="navbarResponsive">
   <!--Start Home section-->
   <div id="home">
 
@@ -457,6 +457,10 @@
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
     crossorigin="anonymous"></script>
   <script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" data-auto-replace-svg="nest"></script>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]');
+  </script>
 </body>
 
 </html>

@@ -26,10 +26,6 @@
     }
  }
 
- html {
-    scroll-behavior: smooth;
- }
-
 body {
     overflow-x: hidden; 
     font-family: 'Lato', sans-serif;
