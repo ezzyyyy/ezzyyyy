@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Beth+Ellen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap');
 
 @media (max-width: 575.98px) { 
     .narrow {
-        width: 100%!important;
+        width: 80% !important;
+    }
+    .caption h1 {
+        font-size: 2.3rem !important;
+    }
+    .caption h4 {
+        font-size: 1.2rem !important;
     }
  }
 
@@ -11,6 +18,26 @@ body {
     overflow-x: hidden; 
     font-family: 'Lato', sans-serif;
     color: #505962;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
+    color: #B3A29B;
+
 }
 
 .logotext {
@@ -29,10 +56,9 @@ body {
 /*--Navigation--*/
 .navbar {
     text-transform: uppercase;
-    font-weight: 700;
     font-size: .9rem;
     letter-spacing: .1rem;
-    background: rgba(165, 195, 211, 0.9)!important;
+    background: #B3A29B90 !important;
 }
 
 .navbar-brand img {
@@ -50,12 +76,162 @@ body {
 
 .navbar-dark .navbar-nav .nav-link.active, 
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: #3A5663;
+    color: #111111;
 }
 
 /*-- Landing page --*/
 .home-inner {
     background-image: url(img/bg.jpg);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Exo', sans-serif;
+}
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    top:50vh;
+    
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+
+.area{
+    background: #B3A29B;  
+    background: -webkit-linear-gradient(to left, #222222, #111111);  
+    width: 100%;
+    height:100vh;
+    
+   
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
 }
 
 .caption {
@@ -70,16 +246,15 @@ body {
 
 .caption h1 {
     font-size: 3.8rem;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: .3rem;
-    text-shadow: .1rem .1rem .8rem black;
     padding-bottom: 1rem;
 }
 
-.caption h3 {
+.caption h4 {
     font-size: 1.5rem;
-    text-shadow: .1rem .1rem .5rem black;
     padding-bottom: 1.6rem;
+    font-weight: 400;
 }
 
 .btn-lg {
@@ -90,11 +265,6 @@ body {
 }
 
 /*-- Course section --*/
-.progress-bar {
-    background-color: #afcfe0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
   
 .narrow {
     width: 75%;
@@ -109,49 +279,54 @@ body {
 .btn-secondary {
     border-width: medium;
     border-radius: 0;
-    text-transform: uppercase;
-    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
     padding: .6rem 1.2rem;
     margin: 1rem;
     color: #FFFFFF;
-    background-color: #e3bfbf;
-    border-color: #e3bfbf;
+    background-color: #B3A29B;
+    border-color: #B3A29B;
 }
 
 .btn-secondary:hover {
-    background-color: #ffede6;
-    border-color: #e3bfbf;
+    background-color: #B3A29B90;
+    border-color: #B3A29B;
 }
 
 /*-- Features --*/
 .jumbotron {
-    margin-bottom: 0;
-    padding: 2rem 0 3.5rem;
+    padding-bottom: 0;
+    padding: 0 0 2rem;
     border-radius: 0;
-    background-color: #f6f6f6;
+    background-color: #B3A29B50;
+}
+
+.jumbotron h2 {
+    color: #505962;
+    font-family: 'Playfair Display', serif;
 }
 
 h3.heading {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
     font-size: 1.9rem;
-    font-weight: 700;
-    text-transform: uppercase;
     margin-bottom: 1.9rem;
 }
 
 .heading-underline {
     width: 3rem;
     height: .2rem;
-    background-color: #e3bfbf;
-    margin: 0 auto 2rem;
+    background-color: #B3A29B;
+    margin: 0 auto;
 }
 
 .feature svg.svg-inline--fa {
-    color: #e3bfbf;
+    color: #B3A29B;
 }
 
-.feature h3 {
+.feature h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
     font-size: 1.3rem;
-    text-transform: uppercase;
     padding-bottom: .4rem;
 }
 
@@ -182,17 +357,28 @@ h3.heading {
 /* projects */
 .cardlist {
     margin-bottom: 0;
-    padding: 2rem 0 3.5rem;
+    padding: 0;
     border-radius: 0;
     background-color: #FFFFFF;
 }
 
+.cardlist h5 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+.cardlist p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: .9rem;
+}
+
 .cardlist .btn {
-    color: #a2c3d3;
+    color: #B3A29B;
 }
 
 .cardlist .btn:hover {
-    color: #e3bfbf;
+    color: #111111;
 }
 
 /*-- Clients --*/
@@ -202,21 +388,26 @@ h3.heading {
 }
 
 blockquote .svg-inline--fa {
-    color: #e3bfbf;
+    color: #B3A29B;
     margin: 1rem;
 }
 
 .clients-hr {
-    border-top: .5rem solid #e3bfbf;
+    border-top: .5rem solid #B3A29B;
 }
 
 /*-- Contact --*/
+.lead {
+    font-family: 'Playfair Display', serif;
+}
 
 footer {
-    background-color: #a2c3d3;
+    background-color: #B3A29B;
     color: white;
     padding: 2rem 0 2rem;
     margin-top: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
 }
 
 footer img {
@@ -234,12 +425,21 @@ footer svg.svg-inline--fa {
 }
 
 footer svg.svg-inline--fa:hover {
-    color: #e3bfbf!important;
+    color: #111111 !important;
+}
+
+footer a:hover {
+    color: #111111 !important;
+}
+
+footer h5 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
 }
 
 hr.socket {
     width: 100%;
-    border-top: .2rem solid #afcfe0;
+    border-top: .2rem solid #C7B4AD;
     margin-top: 3rem;
 }
 
@@ -282,7 +482,7 @@ li.timeline-item {
 /* Timeline item circle marker */
 li.timeline-item::before {
     content: ' ';
-    background: #ddd;
+    background: #B3A29B;
     display: inline-block;
     position: absolute;
     border-radius: 50%;
@@ -291,7 +491,6 @@ li.timeline-item::before {
     width: 14px;
     height: 14px;
     z-index: 400;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 /*-- End Timeline --*/
