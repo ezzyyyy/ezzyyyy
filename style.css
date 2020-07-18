@@ -58,6 +58,11 @@ li {
     text-transform: lowercase;
 }
 
+.logotext a {
+    text-decoration: none;
+    color: white;
+}
+
 .offset:before {
     display: block;
     content: "";
