@@ -1,0 +1,68 @@
+.vertical-tab {
+  float: left;
+  width: 25%;
+  height: 250px;
+  padding-right: 30px;
+}
+
+.vertical-tab button {
+  display: block;
+
+  font-size: 13px;
+  font-family: "Fira Code", monospace;
+  color: #44445270;
+
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 4px;
+
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+.vertical-tab button:hover {
+  border-radius: 0;
+}
+
+.vertical-tab button.active {
+  background: #007bff40;
+  border-radius: 0;
+  padding: 0;
+}
+
+.vertical-tab p,
+.tablinks,
+.edu-tablinks {
+  margin: 0;
+  padding: 0;
+}
+
+.tabcontent {
+  font-size: 13px;
+  font-family: "Fira Code", monospace;
+  float: left;
+  padding: 0px 12px;
+  width: 75%;
+  border-left: none;
+}
+
+@media screen and (max-width: 600px) {
+  .tabcontent {
+    width: 100%;
+    padding: 0;
+  }
+  .vertical-tab {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  .vertical-tab button {
+    margin-right: 20px;
+  }
+}

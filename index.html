@@ -3,458 +3,541 @@
 
 <head>
   <title>Ezra's Portfolio</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="css/fixed.css">
-  <script src="myScript.js"></script>
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/animated_text.css" />
+  <link rel="stylesheet" href="css/fixed.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/tabs.css" />
+  <link rel="stylesheet" href="css/wave.css" />
+  <link rel="stylesheet" href="css/vertical_tabs.css" />
+  <link rel="stylesheet" href="css/hover.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $("nav").find("li").on("click", "a", function () {
-        $('.navbar-collapse').collapse('hide');
-      });
-    });
-  </script>
+  <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
-<body class="smooth-scroll" data-spy="scroll" data-target="navbarResponsive">
-  <!--Start Home section-->
-  <div id="home">
+<body>
+  <div class="topnav" id="navbar">
+    <div class="topnav-right">
+      <a></a>
+      <a href="#skills">01. Skills</a>
+      <a href="#work">02. Work</a>
+      <a href="#education">03. Education</a>
+      <a href="#projects">04. Projects</a>
+      <a href="#contact">05. Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="openNav()">
+        <i data-feather="menu"></i>
+      </a>
+    </div>
+  </div>
 
-    <!-- Navigation -->
-    <nav id="navbar" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <h3 class="logotext"><a class="icon-cat" href="#home"><i class="fas fa-cat"></i></a></h3>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
+  <div id="mobileNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i data-feather="x"></i></a>
+    <div class="overlay-content">
+      <a href="#skills" onclick="closeNav()">01. Skills</a>
+      <a href="#work" onclick="closeNav()">02. Work</a>
+      <a href="#education" onclick="closeNav()">03. Education</a>
+      <a href="#projects" onclick="closeNav()">04. Projects</a>
+      <a href="#contact" onclick="closeNav()">05. Contact</a>
+    </div>
+  </div>
+
+  <div id="home" class="content">
+    <div class="header">
+      <div>
+        <p class="intro">
+          Hello, I'm <strong>Ezra</strong>! <span class="wave">👋</span>
+        </p>
+        <p class="tagline">
+          A software engineer focused on building beautiful things for web and
+          mobile.
+        </p>
+        <div class="revolving-text">
+          <p class="extra">I'm also</p>
+          <div class="rw-sentence rw-words rw-words-1">
+            <span>a coffee addict ☕</span>
+            <span>a mexican food lover 🌮</span>
+            <span>a wanderlust 🚀</span>
+            <span>a huge cinephile 🎥</span>
+            <span>obsessed with cats 😸</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-container">
+        <img class="hero" src="img/hero.jpg" />
+        <div class="bounding-box">
+          <div class="box-name">Ezra [100%]</div>
+          <div class="box"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="quote">
+    <span class="fr-quote">“Il est bon d'aimer autant que l'on peut, car c'est là que gît la vraie
+      force, et celui qui aime beaucoup accomplit de grandes choses et en est
+      capable, et
+      <strong>ce qui se fait par amour est bien fait</strong>.”</span>
+    <span class="el-quote">“It is good to love many things, for therein lies the true strength,
+      and whosoever loves much performs much, and can accomplish much, and
+      <strong>what is done in love is done well</strong>.”</span>
+    <div class="quotee">- Van Gogh 🧑‍🎨</div>
+  </div>
+
+  <div id="skills" class="skills-container">
+    <p class="skills-header">01. Skills</p>
+    <div class="skills-content">
+      <div class="tabs">
+        <ul id="tabs-nav">
+          <li onclick="openSkill('Languages')">
+            <p class="hover-2" style="margin: 0">Languages</p>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
+          <li onclick="openSkill('Frameworks')">
+            <p class="hover-2" style="margin: 0">Frameworks</p>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#experience">Experience</a>
+          <li onclick="openSkill('Tools')">
+            <p class="hover-2" style="margin: 0">Tools</p>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
+          <li onclick="openSkill('Design')">
+            <p class="hover-2" style="margin: 0">Design</p>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#education">Education</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
+          <li onclick="openSkill('Others')">
+            <p class="hover-2" style="margin: 0">Others</p>
           </li>
         </ul>
       </div>
-    </nav>
-    <!-- End Navigation -->
 
-    <!-- Start Landing page section-->
-    <div class="landing">
-      <div class="home-wrap">
-        <div class="home-inner">
-          <div class="area">
-            <ul class="circles">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
+      <div id="tabs-content">
+        <div id="Languages" class="skill">
+          <div class="skill-tag skill-blue">Javascript</div>
+          <div class="skill-tag skill-blue">Java</div>
+          <div class="skill-tag skill-blue">Kotlin</div>
+          <div class="skill-tag skill-blue">Swift</div>
+          <div class="skill-tag skill-blue">HTML5</div>
+          <div class="skill-tag skill-blue">CSS3/SASS</div>
+          <div class="skill-tag skill-blue">Python</div>
+          <div class="skill-tag skill-blue">SQL</div>
         </div>
-      </div>
-    </div>
-
-    <div class="caption text-center">
-      <h1>ezra yeoshua</h1>
-      <h4>computer science undergraduate</h4>
-      <a class="btn btn-outline-light btn-lg" href="#skills"><i class="fas fa-long-arrow-alt-down"></i></a>
-    </div>
-    <!-- End Landing page section-->
-
-
-  </div>
-  <!---End Home section--->
-
-  <!--Start Skills section-->
-  <div id="skills" class="offset">
-    <div class="col-12 narrow text-center">
-      <h3 class="heading">Skills</h3>
-      <div class="heading-underline"></div>
-    </div>
-
-    <div class="narrow text-center">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="feature">
-            <i class="fas fa-code fa-4x" data-fa-transform="shrink-3 up-5"></i>
-            <h4>Programming Languages <br> & Frameworks</h4>
-            <ul class="text-left">
-              <li>Javascript, Java, HTML5/CSS3</li>
-              <li>Python, C</li>
-              <li>Ruby on Rails, React Native + Redux, VueJS, Bootstrap</li>
-            </ul>
-          </div>
+        <div id="Frameworks" class="skill" style="display: none">
+          <div class="skill-tag skill-pink">Ruby on Rails</div>
+          <div class="skill-tag skill-pink">React Native</div>
+          <div class="skill-tag skill-pink">VueJS</div>
+          <div class="skill-tag skill-pink">Bootstrap</div>
+          <div class="skill-tag skill-pink">Quasar</div>
+          <div class="skill-tag skill-pink">Ant Design</div>
+          <div class="skill-tag skill-pink">WindiCSS</div>
         </div>
-
-        <div class="col-md-4">
-          <div class="feature">
-            <i class="fas fa-pencil-ruler fa-4x" data-fa-transform="shrink-3 up-5"></i>
-            <h4>Design & IDE Tools</h4>
-            <ul class="text-left">
-              <li>Visual Studio Code, Android Studio, Xcode, iTerm2</li>
-              <li>Figma, Adobe XD, Sketchapp, Photoshop, Illustrator</li>
-            </ul>
-          </div>
+        <div id="Tools" class="skill" style="display: none">
+          <div class="skill-tag skill-cyan">Xcode</div>
+          <div class="skill-tag skill-cyan">Docker</div>
+          <div class="skill-tag skill-cyan">Git & Github</div>
+          <div class="skill-tag skill-cyan">Postman</div>
+          <div class="skill-tag skill-cyan">Bash</div>
+          <div class="skill-tag skill-cyan">Zsh</div>
+          <br />
+          <div class="skill-tag skill-cyan">Chrome DevTools</div>
+          <div class="skill-tag skill-cyan">Vue DevTools</div>
         </div>
-
-        <div class="col-md-4">
-          <div class="feature">
-            <i class="fas fa-code-branch fa-4x" data-fa-transform="shrink-3 up-5"></i>
-            <i class="fas fa-database fa-4x" data-fa-transform="shrink-3 up-5"></i>
-            <h4>Version Control & <br> DB Management</h4>
-            <ul class="text-left">
-              <li>Azure DevOps, Github, Bitbucket</li>
-              <li>Firebase Database, MongoDb, SQL Server</li>
-            </ul>
-          </div>
+        <div id="Design" class="skill" style="display: none">
+          <div class="skill-tag skill-green">Figma</div>
+          <div class="skill-tag skill-green">Adobe XD</div>
+          <div class="skill-tag skill-green">Sketchapp</div>
+          <div class="skill-tag skill-green">Photoshop</div>
+          <div class="skill-tag skill-green">Illustrator</div>
+          <div class="skill-tag skill-green">Wireframing</div>
+          <div class="skill-tag skill-green">Prototyping</div>
+          <div class="skill-tag skill-green">User Testing</div>
         </div>
-      </div> <!-- End Row -->
-    </div>
-  </div>
-  <!---End Skills section--->
-
-  <!--Start Experience section-->
-  <div id="experience" class="offset">
-
-    <div class="jumbotron">
-      <div class="narrow text-center">
-        <div class="col-12">
-          <h3 class="heading">Experience</h3>
-          <div class="heading-underline"></div>
+        <div id="Others" class="skill" style="display: none">
+          <div class="skill-tag skill-red">Strapi</div>
+          <div class="skill-tag skill-red">FastAPI</div>
+          <div class="skill-tag skill-red">Pinia</div>
+          <div class="skill-tag skill-red">Cypress</div>
         </div>
-
-        <!-- Start Timeline -->
-        <div class="row">
-          <div class="col-12">
-
-            <ul class="timeline text-dark">
-              <li class="timeline-item bg-white rounded ml-3 p-4">
-                <div class="timeline-arrow"></div>
-                <h2 class="h5 mb-0">Junior Software Engineer, Payboy</h2>
-                <span class="small text-gray"><i class="fas fa-clock mr-1"></i>Dec 2019 – Aug 2020</span>
-                <ul class="text-left pt-3 pl-4 pr-4">
-                  <li>Developed new features into company’s web and cross-platform mobile app and collaborated with product
-                    development team in maintaining their functionality.</li>
-                </ul>
-              </li>
-
-              <li class="timeline-item bg-white rounded ml-3 p-4">
-                <div class="timeline-arrow"></div>
-                <h2 class="h5 mb-0">UI/UX Designer, Constant Bearing</h2>
-                <span class="small text-gray"><i class="fas fa-clock mr-1"></i>Apr 2019 – Aug 2020</span>
-                <ul class="text-left pt-3 pl-4 pr-4">
-                  <li>Brainstormed and designed Port Call Management app for ship crew members to plan and execute port 
-                    call operations more effectively.</li>
-                  <li>Participated in BACECAMP Startup Mentorship Programme with Founder of ConsBear - observed how
-                    early-stage startups are equipped with key insights, best practices and capabilities to start and
-                    grow</li>
-
-                </ul>
-              </li>
-
-              <li class="timeline-item bg-white rounded ml-3 p-4">
-                <div class="timeline-arrow"></div>
-                <h2 class="h5 mb-0">App Developer, Skyfy Technology</h2>
-                <span class="small text-gray"><i class="fas fa-clock mr-1"></i>Oct 2018 – Nov 2019</span>
-                <ul class="text-left pt-3 pl-4 pr-4">
-                  <li>Integrated vital vehicle tracking features derived from their web portal into their 
-                    mobile app, doubling Android and iOS active users.</li>
-                  <li>Developed standalone apps that use GPS (Global Positioning System), NFC (Near Field Communication) 
-                    and Digital Signature capabilities, securing 2 local and foreign clients.</li>
-                  <li>Maintained LM2 - Route planning app by A*Star.</li>
-                  <li>Assisted in maintenance, deployment and client demos of the apps.</li>
-                </ul>
-              </li>
-
-              <li class="timeline-item bg-white rounded ml-3 p-4">
-                <div class="timeline-arrow"></div>
-                <h2 class="h5 mb-0">Final-year Project, Singapore General Hospital</h2>
-                <span class="small text-gray"><i class="fa fa-clock mr-1"></i>Apr 2018 – Oct 2018</span>
-                <ul class="text-left pt-3 pl-4 pr-4">
-                  <li>Eased sharing of guideline info and common hospital practices among pharmacists through developing a 
-                    mobile app with offline support, 100% resilient to network connectivity issues.</li>
-                  <li>Maintained until Jan 2019</li>
-                </ul>
-              </li>
-            </ul>
-
-          </div><!-- End Timeline -->
-        </div>
-
       </div>
     </div>
   </div>
-  <!---End Experience section--->
 
-  <!--Start Projects section-->
-  <div id="projects" class="offset">
-
-    <!--Start Jumbotron-->
-    <div class="text-center">
-      <div class="col-12">
-        <h3 class="heading">Dev Projects</h3>
-        <div class="heading-underline"></div>
-      </div>
-      <div class="cardlist">
-        <!-- Start Timeline -->
-        <div class="narrow text-center no-pt">
-          <div class="row">
-
-            <div class="col-md-4">
-              <a href="https://bitbucket.org/ezzyyyy/vehicle-stock-management-system" target="_blank">
-                <div class="card">
-                  <img src="img/ats.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Asset Tracking</h5>
-                    <p class="card-text">Use NFC to locate and identify your vehicles.</p>
-                  </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Digital Signature</li>
-                    <li class="list-group-item">Location Tracking</li>
-                    <li class="list-group-item">Capture Photos</li>
-                    <li class="list-group-item">NFC</li>
-                  </ul>
-                  <div class="card-body">
-                    <a class="btn btn-sm" href="https://bitbucket.org/ezzyyyy/vehicle-stock-management-system"
-                      target="_blank"><i class="fas fa-code fa-2x" data-fa-transform="shrink-3"></i></i></a>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-md-4">
-              <a href="https://apps.apple.com/sg/app/skyfy-vts-2-0/id1449590451" target="_blank">
-                <div class="card">
-                  <img src="https://media.giphy.com/media/VEmgRo5yQoqKvwjeK8/giphy.gif" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Vehicle Tracking</h5>
-                    <p class="card-text">Organizations may now control and keep track of their vehicle assets no matter
-                      where they are.</p>
-                  </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Generate Vehicle Reports</li>
-                    <li class="list-group-item">Tracks playback</li>
-                    <li class="list-group-item">Intercom Support</li>
-                    <li class="list-group-item">Push Notifications</li>
-                  </ul>
-                  <div class="card-body">
-                    <a class="btn btn-sm" href="https://play.google.com/store/apps/details?id=com.vts2&hl=en_SG"
-                      target="_blank"><i class="fab fa-google-play fa-2x" data-fa-transform="shrink-3"></i></a>
-                    <a class="btn btn-sm" href="https://apps.apple.com/sg/app/skyfy-vts-2-0/id1449590451"
-                      target="_blank"><i class="fab fa-apple fa-2x ml-3 mr-3" data-fa-transform="shrink-3"></i></i></a>
-                    <a class="btn btn-sm" href="https://bitbucket.org/ezzyyyy/tracking-system" target="_blank"><i
-                        class="fas fa-code fa-2x" data-fa-transform="shrink-3"></i></i></a>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-md-4">
-              <a href="https://apps.apple.com/sg/app/skyfy-wts/id1477956611" target="_blank">
-                <div class="card">
-                  <img src="https://media.giphy.com/media/gKOPWkchNJeqE08XvU/giphy.gif" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Workforce Tracking</h5>
-                    <p class="card-text">Stay informed on the whereabouts of your key business assets.</p>
-                  </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Start/End Shift</li>
-                    <li class="list-group-item">Location Tracking</li>
-                    <li class="list-group-item">Generate Shift Report</li>
-                    <li class="list-group-item">Offline Support</li>
-                  </ul>
-                  <div class="card-body">
-                    <a class="btn btn-sm" href="https://play.google.com/store/apps/details?id=com.wtsapp&hl=en_SG"
-                      target="_blank"><i class="fab fa-google-play fa-2x" data-fa-transform="shrink-3"></i></a>
-                    <a class="btn btn-sm" href="https://apps.apple.com/sg/app/skyfy-wts/id1477956611" target="_blank"><i
-                        class="fab fa-apple fa-2x ml-3 mr-3" data-fa-transform="shrink-3"></i></i></a>
-                    <a class="btn btn-sm" href="https://bitbucket.org/ezzyyyy/workforce-management-system"
-                      target="_blank"><i class="fas fa-code fa-2x" data-fa-transform="shrink-3"></i></i></a>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div><!-- End Timeline -->
-      </div>
-      <div class="col-12">
-        <h3 class="heading">UI/UX Projects</h3>
-        <div class="heading-underline"></div>
-      </div>
-      <div class="cardlist">
-        <!-- Start Timeline -->
-        <div class="narrow text-center no-pt">
-          <div class="row">
-
-            <div class="col-md-4">
-              <a href="https://www.figma.com/file/qHjxve07p8Cd8mmQC4PFg5/payboy?node-id=0%3A1" target="_blank">
-                <div class="card">
-                  <img src="https://media2.giphy.com/media/UVlCyvZWAk43nr4AkH/giphy.gif" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Payboy Revamp</h5>
-                    <p class="card-text">Re-imagine Payboy's new dashboard page.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-md-4">
-              <a href="https://www.figma.com/file/klo6GAjpcLuY8TA8ufEW5r/Food-Waste-App-Ideas?node-id=25%3A1"
-                target="_blank">
-                <div class="card">
-                  <img src="https://media0.giphy.com/media/VIhKEEoOsy3gB7dwH3/giphy.gif" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Surplus Food Sharing</h5>
-                    <p class="card-text">Find surplus delicacies at a cheaper price near you.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-md-4">
-              <a href="https://www.figma.com/file/C9tIzJaDkONikQ60uqgwaI/Group-C-App?node-id=1%3A4" target="_blank">
-                <div class="card">
-                  <img src="https://media2.giphy.com/media/Ihy6CX475A8fzyIrgS/giphy.gif" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Auto-donation</h5>
-                    <p class="card-text">Donate to your chosen campaigns or charities anytime, anywhere.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div><!-- End Timeline -->
+  <div id="work" class="work-container">
+    <p class="work-header">02. Work</p>
+    <div class="work-content">
+      <div class="vertical-tab">
+        <button class="tablinks" id="defaultOpenWork" onclick="openTab(event, 'yoozoo')">
+          <p class="hover-2 tab-text">Yoozoo AI</p>
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'payboy')">
+          <p class="hover-2 tab-text">Payboy</p>
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'consbear')">
+          <p class="hover-2 tab-text">Constant Bearing</p>
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'skyfy')">
+          <p class="hover-2 tab-text">Skyfy</p>
+        </button>
       </div>
 
-    </div> <!-- End Narrow -->
-  </div><!-- End Jumbotron-->
-  <!---End Projects section--->
-
-  <!--Start Education section-->
-  <div id="education" class="offset">
-
-    <!--Start Jumbotron-->
-    <div class="jumbotron">
-      <div class="narrow text-center">
-        <div class="col-12">
-          <h3 class="heading">Education</h3>
-          <div class="heading-underline"></div>
+      <div id="yoozoo" class="tabcontent">
+        <div class="work-title-container">
+          <p class="work-title">AI Engineer Intern @</p>
+          <p class="work-company">Yoozoo AI²Labs</p>
         </div>
-
-        <!-- Start Timeline -->
-        <div class="row">
-          <div class="col-12 mx-auto">
-
-            <ul class="timeline text-center">
-              <li class="timeline-item bg-white rounded ml-3 p-4">
-                <div class="timeline-arrow"></div>
-                <h2 class="h5 mb-0">BSc(Hons) in Computing Science, Singapore Institute of Technology</h2>
-                <span class="small text-gray"><i class="fas fa-clock mr-1"></i>Sep 2020 - Aug 2023</span>
-              </li>
-
-              <li class="timeline-item bg-white rounded ml-3 p-4">
-                <div class="timeline-arrow"></div>
-                <h2 class="h5 mb-0">Certificate in Entrepreneurship, Startup Talent Factory</h2>
-                <span class="small text-gray"><i class="fas fa-clock mr-1"></i>2019 - 2020</span>
-                <ul class="text-left pt-3 pl-4 pr-4">
-                  <li>This Work-Study Post-Diploma (WSP) is designed to give fresh Polytechnic graduates a career
-                    head-start in Entrepreneurship</li>
-                  <li>Modules include: Startup Finance & Operations, Product Development, Business Development, Digital
-                    Marketing, User Experience Design</li>
-                </ul>
-              </li>
-
-              <li class="timeline-item bg-white rounded ml-3 p-4">
-                <div class="timeline-arrow"></div>
-                <h2 class="h5 mb-0">Diploma in Information Technology, Singapore Polytechnic</h2>
-                <span class="small text-gray"><i class="fas fa-clock mr-1"></i>2016 – 2019</span>
-                <ul class="text-left pt-3 pl-4 pr-4">
-                  <li>Specialization: Solutions Development</li>
-                  <li>Electives: User Interface Design, Business Analytics and Network Security</li>
-                </ul>
-              </li>
-
-              <li class="timeline-item bg-white rounded ml-3 p-4">
-                <div class="timeline-arrow"></div>
-                <h2 class="h5 mb-0">GCE ‘O’ Levels, Gan Eng Seng School</h2>
-                <span class="small text-gray"><i class="fas fa-clock mr-1"></i>2012 – 2015</span>
-              </li>
-            </ul>
-
-          </div>
-        </div><!-- End Timeline -->
+        <p class="work-date">May 2021 to Sep 2021</p>
+        <ul class="work-list">
+          <li>
+            Developed an AI (Artificial Intelligence) analysis program that
+            uses
+            <span class="hl" data-scroll id="highlight">Facial Expression Detection and Sentiment Analysis</span>
+            , to provide feedback on how tertiary students could improve their
+            Work-Study programme interviews.
+          </li>
+          <li>
+            Revamped an iOS application that uses
+            <span class="hl" data-scroll id="highlight">Facial Recognition</span>
+            to authenticate patients at Institute of Mental Health for a more
+            secure and efficient dispensation of their medicine.
+          </li>
+        </ul>
       </div>
 
-    </div> <!-- End Narrow -->
-  </div><!-- End Jumbotron-->
-  <!---End Education section--->
+      <div id="payboy" class="tabcontent">
+        <div class="work-title-container">
+          <p class="work-title">Junior App Developer @</p>
+          <p class="work-company">Payboy</p>
+        </div>
+        <p class="work-date">Dec 2019 to Aug 2020</p>
+        <ul class="work-list">
+          <li>
+            Developed new features into company’s web and cross-platform
+            mobile app and collaborated with product development team in
+            maintaining their functionality.
+          </li>
 
-  <!--Start Contact section-->
-  <div id="contact" class="offset">
-    <div class="col-12 narrow text-center">
-      <p class="lead">Want to collaborate or talk?</p>
-      <a class="lead-btn btn btn-secondary btn-md" href="https://wa.me/6582330347" target="_blank">Click
-        here</a>
+          <li>
+            Engineered the
+            <span class="hl" data-scroll id="highlight">Jobs Support Scheme Calculator</span>
+            for local companies to efficiently calculate employee pay-outs
+            during the COVID-19 pandemic.
+          </li>
+        </ul>
+      </div>
+
+      <div id="consbear" class="tabcontent">
+        <div class="work-title-container">
+          <p class="work-title">UI/UX Design Freelancer @</p>
+          <p class="work-company">Constant Bearing</p>
+        </div>
+        <p class="work-date">Apr 2019 to Aug 2020</p>
+        <ul class="work-list">
+          <li>
+            Designed Port Call Management
+            <span class="hl" data-scroll id="highlight">web app (form-based)</span>
+            for ship crew members to plan and execute port call operations
+            more effectively.
+          </li>
+        </ul>
+      </div>
+
+      <div id="skyfy" class="tabcontent">
+        <div class="work-title-container">
+          <p class="work-title">App Developer Intern @</p>
+          <p class="work-company">Skyfy Technology</p>
+        </div>
+        <p class="work-date">Oct 2018 to Nov 2019</p>
+        <ul class="work-list">
+          <li>
+            Integrated vital vehicle tracking features derived from their web
+            portal into their mobile app.
+          </li>
+          <li>
+            Developed standalone apps that use
+            <span class="hl" data-scroll id="highlight">GPS (Global Positioning System), NFC (Near Field Communication)
+              and Digital Signature</span>
+            capabilities.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="education" class="work-container">
+    <p class="work-header">03. Education</p>
+    <div class="work-content">
+      <div class="vertical-tab">
+        <button class="edu-tablinks" onclick="openEdu(event, 'sit')" id="defaultOpenEdu">
+          <p class="hover-2">Singapore Institute of Technology</p>
+        </button>
+        <button class="edu-tablinks" onclick="openEdu(event, 'wsp')">
+          <p class="hover-2">Work-Study Programme</p>
+        </button>
+        <button class="edu-tablinks" onclick="openEdu(event, 'sp')">
+          <p class="hover-2">Singapore Poly</p>
+        </button>
+      </div>
+
+      <div id="sit" class="edu-tabcontent">
+        <div class="work-title-container">
+          <p class="work-title">Singapore Institute of Technology</p>
+        </div>
+        <div class="school-container work-date">
+          Joint degree with
+          <p class="work-date school">University of Glasgow</p>
+        </div>
+        <p class="work-date">Sep 2020 to Aug 2023</p>
+        <ul class="work-list">
+          <li>Bachelor of Science with Honours, Computing Science</li>
+          <li>Expected Course Completion: Aug 2023</li>
+        </ul>
+      </div>
+
+      <div id="wsp" class="edu-tabcontent">
+        <div class="work-title-container">
+          <p class="work-title">Startup Talent Factory</p>
+        </div>
+        <p class="work-date">2019 - 2020</p>
+        <ul class="work-list">
+          <li>Certificate in Entrepreneurship</li>
+          <li>A Work-Study Programme</li>
+          <li>
+            Modules include: Startup Finance & Operations, Product
+            Development, Business Development, Digital Marketing, User
+            Experience Design
+          </li>
+        </ul>
+      </div>
+
+      <div id="sp" class="edu-tabcontent">
+        <div class="work-title-container">
+          <p class="work-title">Singapore Polytechnic</p>
+        </div>
+        <p class="work-date">Apr 2016 to May 2019</p>
+        <ul class="work-list">
+          <li>Diploma in Information Technology</li>
+          <li>
+            Academic Related Awards: School of Computing Director’s Roll <span class="wave">🏆</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="projects">
+    <p class="projects-header">04. Projects</p>
+    <div class="projects-subheader">
+      <p>A. Development projects</p>
+    </div>
+    <div class="projects-container">
+      <div class="float-on-hover project-card-container">
+        <div class="project-card">
+          <div class="project-icons">
+            <div class="project-icon"><i data-feather="folder"></i></div>
+            <div class="repo-icon">
+              <a href="https://sg.linkedin.com/in/ezra-yeoshua" style="text-decoration: none; color: inherit">
+                <i data-feather="git-branch"></i></a>
+            </div>
+          </div>
+          <div>
+            <div class="project-title">Garbage Detection</div>
+            <div class="project-text">
+              An object recognition script to identify various types of
+              recyclable materials.<br />
+              An interdisciplinary collaboration overseas at the University of
+              Glasgow.
+            </div>
+            <div class="project-tags">
+              <div class="project-tag">Python</div>
+              <div class="project-tag">Google Colab</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-on-hover project-card-container">
+        <div class="project-card">
+          <div class="project-icons">
+            <div class="project-icon"><i data-feather="folder"></i></div>
+            <div class="repo-icon">
+              <a href="https://github.com/ezzyyyy/ble-poc" style="text-decoration: none; color: inherit">
+                <i data-feather="git-branch"></i></a>
+            </div>
+          </div>
+          <div>
+            <div class="project-title">Bluetooth Low Energy App</div>
+            <div class="project-text">
+              A proof-of-concept for implementing BLE on React Native using
+              NativeModules.
+            </div>
+            <div class="project-tags">
+              <div class="project-tag">React Native</div>
+              <div class="project-tag">Swift</div>
+              <div class="project-tag">Java</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-on-hover project-card-container">
+        <div class="project-card">
+          <div class="project-icons">
+            <div class="project-icon"><i data-feather="folder"></i></div>
+            <div class="repo-icon">
+              <a href="https://bitbucket.org/ezzyyyy/movies-ios-app/src/main/"
+                style="text-decoration: none; color: inherit">
+                <i data-feather="git-branch"></i></a>
+            </div>
+          </div>
+          <div>
+            <div class="project-title">Movie Discovery App</div>
+            <div class="project-text">
+              A mobile app similar to the IMDb website, developed with MVVM
+              architecture.
+            </div>
+            <div class="project-tags">
+              <div class="project-tag">XCode</div>
+              <div class="project-tag">Swift</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-on-hover project-card-container">
+        <div class="project-card">
+          <div class="project-icons">
+            <div class="project-icon"><i data-feather="folder"></i></div>
+            <div class="repo-icon">
+              <a href="https://bitbucket.org/ezzyyyy/tracking-system/src/master/"
+                style="text-decoration: none; color: inherit">
+                <i data-feather="git-branch"></i></a>
+            </div>
+          </div>
+          <div>
+            <div class="project-title">Vehicle Tracking App</div>
+            <div class="project-text">
+              A mobile app that allows organizations to track their vehicle
+              assets no matter where they are.
+            </div>
+            <div class="project-tags">
+              <div class="project-tag">React Native</div>
+              <div class="project-tag">Redux</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-on-hover project-card-container">
+        <div class="project-card">
+          <div class="project-icons">
+            <div class="project-icon"><i data-feather="folder"></i></div>
+            <div class="repo-icon">
+              <a href="https://github.com/Peixiannn/WushuInventory" style="text-decoration: none; color: inherit">
+                <i data-feather="git-branch"></i></a>
+            </div>
+          </div>
+          <div>
+            <div class="project-title">Inventory Management App</div>
+            <div class="project-text">
+              A pair mobile project for a Wushu Training Company that tracks
+              assets and expenses.
+            </div>
+            <div class="project-tags">
+              <div class="project-tag">Java</div>
+              <div class="project-tag">Android Studio</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-on-hover project-card-container">
+        <div class="project-card">
+          <div class="project-icons">
+            <div class="project-icon"><i data-feather="folder"></i></div>
+            <div class="repo-icon">
+              <a href="https://github.com/ezzyyyy/ezzyyyy.github.io" style="text-decoration: none; color: inherit">
+                <i data-feather="git-branch"></i></a>
+            </div>
+          </div>
+          <div>
+            <div class="project-title">Personal Website V2</div>
+            <div class="project-text">Github repo for this website.</div>
+            <div class="project-tags">
+              <div class="project-tag">HTML</div>
+              <div class="project-tag">CSS</div>
+              <div class="project-tag">Javascript</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <footer>
-      <div class="row justify-content-center">
-        <div class="col-md-5 text-center">
-          <!-- <img src="img/nuno.png"> -->
-          <h3 class="logotext"><i class="fas fa-cat"></i></h3>
-          <p> </p>
-          <h5>Contact Info</h5>
-          <p>ezrayeoshua123@gmail.com</p>
-          <a href="https://linked.in/ezra-yeoshua" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://instagram.com/ezrayeoshua" target="_blank"><i class="fab fa-instagram"></i></a>
+    <div class="projects-subheader" style="margin-top: 30px">
+      <p>B. Design projects</p>
+    </div>
+    <div class="projects-container">
+
+      <div class="float-on-hover project-card-container">
+        <div class="project-card project-card-img">
+          <div class="project-img">
+            <img src="img/wellness.png" />
+          </div>
+          <div>
+            <div class="project-title">360wellness</div>
+            <div class="project-text">
+              A trio project on an online health and wellness coaching platform.
+            </div>
+          </div>
         </div>
-
-        <hr class="socket">
-        &copy; Updated by Ezra 2021
       </div>
-    </footer>
 
+      <div class="float-on-hover project-card-container">
+        <div class="project-card project-card-img">
+          <div class="project-img">
+            <img src="https://media2.giphy.com/media/UVlCyvZWAk43nr4AkH/giphy.gif" />
+          </div>
+          <div>
+            <div class="project-title">Payboy Revamp</div>
+            <div class="project-text">
+              Re-imagine Payboy's mobile dashboard page.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-on-hover project-card-container">
+        <div class="project-card project-card-img">
+          <div class="project-img">
+            <img src="https://media0.giphy.com/media/VIhKEEoOsy3gB7dwH3/giphy.gif" />
+          </div>
+          <div>
+            <div class="project-title">Surplus Food Sharing</div>
+            <div class="project-text">
+              Find surplus delicacies at a cheaper price near you.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <!---End Contact section--->
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
-  <script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" data-auto-replace-svg="nest"></script>
-  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
-  <script>
-    var scroll = new SmoothScroll('a[href*="#"]');
-  </script>
+  <div id="contact" class="contact-container">
+    <p class="contact-header">05. Contact</p>
+    <p class="contact-text">
+      Get in touch with me on
+      <span class="hl" style="cursor: pointer" id="highlight"><a href="mailto:ezrayeoshua123@gmail.com"
+          style="color: #444452; text-decoration: none">ezrayeoshua123@gmail.com</a>.</span>
+    </p>
+    <div class="contact-icon">
+      <a href="https://sg.linkedin.com/in/ezra-yeoshua" style="text-decoration: none; color: inherit">
+        <i data-feather="linkedin"></i></a>
+    </div>
+    <p class="footer-text">
+      Designed & developed by Ezra Yeoshua.
+    </p>
+  </div>
 </body>
+
+<script src="javascript/main.js"></script>
+<script src="javascript/jquery.js"></script>
+<script src="javascript/nav.js"></script>
 
 </html>

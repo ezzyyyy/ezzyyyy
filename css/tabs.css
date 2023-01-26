@@ -1,0 +1,52 @@
+/* Tabs */
+
+ul#tabs-nav {
+  list-style: none;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+}
+
+ul#tabs-nav li {
+  float: left;
+  font-weight: bold;
+  border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+
+  font-family: "Cabin", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 15px;
+  color: #444452;
+
+  margin-right: 40px;
+}
+
+ul#tabs-nav li.active {
+  background: #007bff40;
+  border-radius: 0;
+}
+
+#tabs-content {
+  margin-top: 20px;
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tab-content {
+  padding: 10px;
+  border: 5px solid #09f;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  ul#tabs-nav li {
+    max-width: 300px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  #tabs-content {
+    max-width: 300px;
+  }
+}
