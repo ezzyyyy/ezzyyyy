@@ -9,6 +9,10 @@ body {
   color: #444452;
 }
 
+div {
+  outline: none;
+}
+
 ::-moz-selection {
   /* Code for Firefox */
   color: #444452;
