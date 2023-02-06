@@ -344,6 +344,7 @@ body {
   display: flex;
   flex-direction: row;
   font-size: 15px;
+  padding-bottom: 10px;
 }
 
 #projects {
