@@ -17,12 +17,14 @@ $("#tabs-nav li").click(function () {
 $(".el-quote").hide();
 $(".fr-quote").show();
 
-// Hover function on quote
-$(".quote").hover(function () {
-  $(".el-quote").fadeIn(2000);
-  $(".el-quote").show();
-  $(".fr-quote").hide();
-  return false;
+// Change language of quote at certain scroll height
+$(window).scroll(function() {
+  if ($(window).scrollTop() > $("#trigger").offset().top - 150) {
+    // console.log("Scrolled past trigger element!");
+    $(".el-quote").fadeIn(2000);
+    $(".el-quote").show();
+    $(".fr-quote").hide();
+  }
 });
 
 // Float highlight on project card title
