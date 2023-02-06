@@ -20,7 +20,6 @@ $(".fr-quote").show();
 // Change language of quote at certain scroll height
 $(window).scroll(function() {
   if ($(window).scrollTop() > $("#trigger").offset().top - 150) {
-    // console.log("Scrolled past trigger element!");
     $(".el-quote").fadeIn(2000);
     $(".el-quote").show();
     $(".fr-quote").hide();

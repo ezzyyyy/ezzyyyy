@@ -335,14 +335,11 @@ body {
 
 .school {
   color: #007bff;
-  padding-left: 10px;
   font-size: 15px;
   font-weight: 600;
 }
 
 .school-container {
-  display: flex;
-  flex-direction: row;
   font-size: 15px;
   padding-bottom: 10px;
 }
