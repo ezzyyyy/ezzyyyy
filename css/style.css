@@ -667,6 +667,9 @@ div {
   /* Position the google-tooltip */
   position: absolute;
   z-index: 1;
+  top: 100%; /* Adjust this value to control the distance between the text and tooltip */
+  left: 0;
+  right: 0;
 }
 
 .google-tooltip:hover .google-tooltiptext,
