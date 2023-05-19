@@ -383,6 +383,13 @@ div {
   object-fit: cover;
   object-position: left top;
 }
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .project-card-container {
   margin: 20px;
 }
@@ -470,11 +477,6 @@ div {
   }
   .project-tag {
     font-size: 11px;
-  }
-  .projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
   }
 }
 
@@ -640,4 +642,34 @@ div {
     top: 15px;
     right: 35px;
   }
+}
+
+.google-tooltip,
+.tiktok-tooltip {
+  position: relative;
+  display: inline-block;
+  color: #007bff;
+  /* border-bottom: 1px dotted black; */
+}
+
+.google-tooltip .google-tooltiptext,
+.tiktok-tooltip .tiktok-tooltiptext {
+  visibility: hidden;
+  width: 450px;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 12px;
+  font-weight: 300;
+
+  /* Position the google-tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.google-tooltip:hover .google-tooltiptext,
+.tiktok-tooltip:hover .tiktok-tooltiptext {
+  visibility: visible;
 }
